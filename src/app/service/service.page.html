@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar color="home-red">
+    <ion-title>Services</ion-title>
+    <ion-button color="white" slot="start">
+        <ion-menu-button menu="main-menu"></ion-menu-button>
+      </ion-button>
+  </ion-toolbar>
+</ion-header>
+  <ion-content fullscreen class="ion-padding" scroll-y="false">
+    <ion-slides>
+
+      <ion-slide>
+        <div class="slide">
+          <img src="assets/icon/logopointvente.jpg" slot="start" style="border-radius: 100%;"/>
+          <h2>Bienvenue au service point de vente</h2>
+          <p>Un <b>point de vente</b> ou magasin, est un établissement de vente au détail qui a une réelle activité de vente et qui possède donc une surface de vente.</p>
+        </div>
+      <ion-item routerLink="/poss">
+        <ion-button  fill="outline" shape="round" expand="block" style="margin-left: 50px; width: 200px;">point de vente</ion-button>
+      </ion-item>
+      </ion-slide>
+
+
+      <ion-slide>
+        <div class="slide">
+          <img src="assets/icon/logogrh.jpg" slot="start" style="border-radius: 100%;"/>
+          <h2>Bienvenue au service GRH</h2>
+          <p>Les <b>ressources humaines</b> souvent connues sous leur acronyme RH, correspondent en général à un département de l'entreprise qui est en charge des relations entre employeurs et salariés.</p>
+        </div>
+      <ion-item routerLink="/grh">
+        <ion-button  fill="outline" shape="round" expand="block" style="margin-left: 50px; width: 200px;">Ressources Humaines </ion-button>
+      </ion-item>
+      </ion-slide>
+
+      <ion-slide>
+        <div class="slide">
+          <img src="assets/icon/logostock.jpg" slot="start" style="border-radius: 30%;"/>
+          <h2>Bienvenue au service stock</h2>
+          <p>La <b>notion de stock</b> est importante dans l’entreprise. Cette dernière fabrique et stocke ses produits avant de les vendre. Gérer son stock est au cœur des préoccupations des chefs d’entreprise pour plusieurs raisons.</p>
+        </div>
+      <ion-item routerLink="/stock">
+        <ion-button  fill="outline" shape="round" expand="block" style="margin-left: 50px; width: 200px;">Stock</ion-button>
+      </ion-item>
+      </ion-slide>
+      <ion-slide>
+        <div class="slide">
+          <img src="assets/icon/compta.jpg" slot="start" style="border-radius: 100%;"/>
+          <h2>Bienvenue au service comptabilité</h2>
+          <p>La <b> définition de la comptabilité est simple.</b>  Il s’agit d’une pratique évaluant tous des flux financiers de l’entreprise..</p>
+        </div>
+      <ion-item routerLink="/compta">
+        <ion-button  fill="outline" shape="round" expand="block" style="margin-left: 50px; width: 200px;">Comptabilité</ion-button>
+      </ion-item>
+      </ion-slide>
+    </ion-slides>
+  
+</ion-content>

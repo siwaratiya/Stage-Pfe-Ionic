@@ -1,0 +1,20 @@
+<ion-app>
+  <ion-header>
+  
+  <ion-title>Accueil</ion-title>
+</ion-header>
+<ion-content>
+<ion-card  class="articles" *ngFor="let actualitee of actualitees ">
+  <div class="article">
+  <div class="left">
+    <img src="https://www.villedefloing.com/wp-content/uploads/2015/05/news2.jpg" alt="">
+  </div>
+    <ion-card-content style="color: black;">
+        <p  class="date">{{actualitee.heure | date}}</p>
+        <h5 class="tit" >{{actualitee.titre}}</h5>
+        <p class="description">{{actualitee.description}}</p>
+    </ion-card-content>
+    </div>
+</ion-card>
+</ion-content>
+</ion-app>

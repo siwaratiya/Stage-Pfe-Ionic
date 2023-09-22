@@ -1,0 +1,57 @@
+<ion-app>
+  <ion-header>
+    <ion-toolbar color="home-red">
+ <ion-titel style=" font-weight : bolder; text-align: center; margin-left: 90px;">Ajouter Réclamation</ion-titel>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content [fullscreen]="true">
+    <div class="circlbase type2 circlet1"></div>
+    <div class="circlbase type1"></div>
+    <div class="circlbase type2 circlet2"></div>
+
+    <ion-label class="welcommessage">
+     
+      <ion-text color="light">
+        <p>Réclamation</p>
+      </ion-text>
+    </ion-label>
+    <ion-icon name="arrow-back-outline" color="white" class="backButton" routerLink="/listrec"></ion-icon>
+    <div [hidden]="submitted" style="width: 400;">
+      <form [formGroup]="recForm" (ngSubmit)="onSubmit()">
+        <ion-list lines="none" class="ion-margin ion-padding ion-text-center">
+          <ion-item class="ion-margin-vertical">
+
+            <ion-icon name="keypad-outline" slot="end" color="medium">
+            </ion-icon>
+            <ion-input formControlName="Typerec" placeholder="Type reclamation" required></ion-input>
+          </ion-item>
+          <ion-text class="ion-text-left" color="danger"
+            *ngIf="!recForm.get('Typerec').valid && recForm.get('Typerec').touched">
+            <p class="error">*Type reclamation est obilgatoire</p>
+          </ion-text>
+          <ion-item class="ion-margin-vertical">
+            <ion-icon name="reader-outline" slot="end" color="medium">
+            </ion-icon>
+            <ion-input formControlName="descrec" placeholder="Description" required></ion-input>
+          </ion-item>
+          <ion-text class="ion-text-left" color="danger"
+            *ngIf="!recForm.get('descrec').valid && recForm.get('descrec').touched">
+            <p class="error">*Description est obligatoire</p>
+          </ion-text>
+
+          <div id="chk_svc">
+            <ion-item *ngFor="let item of lstservice">
+              <input type="checkbox" (change)="onCheckChange($event)" name="svc_{{item.id_service}}"
+                [value]='item.id_service' color="danger" /><br>
+              <ion-label>{{item.nom_service}}</ion-label>
+            </ion-item>
+          </div>
+                 
+          <br>
+          <ion-button color="primary" shape="round" type="submit" (click)="AjoutReclamation()">Envoyer Réclamation
+          </ion-button>
+        </ion-list>
+      </form>
+    </div>
+  </ion-content>
+</ion-app>

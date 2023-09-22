@@ -1,0 +1,97 @@
+ion-content {
+  //--ion-background-color:rgb(141, 171, 200);
+  //--ion-background-color: #121212;
+ //--ion-background-color: #a39797af;
+ // --ion-background-color: #c4c4c4af;
+ --ion-background-color: linear-gradient(90deg, #97afd6 0%,#f1eae5fa 50%, #e7c482 100% );
+ box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.993) ;
+}
+
+.circlbase{
+  border-radius: 50%;
+}
+.type1{
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  background: linear-gradient(90deg, #1454c3 0%, #000000 100% );
+  box-shadow: 0px 1px 10px rgba(192, 201, 226, 0.5) ;
+  top: -50px;
+  left: -50px;
+}
+.type2{
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(90deg, #17181a 0%, #f6a206 100% );
+  box-shadow: 0px 1px 10px rgba(185, 200, 243, 0.849) ;
+}
+.circlet1{
+
+  margin-left: 180px;
+  margin-top: 50px;
+}
+.circlet2{
+
+ position: absolute;
+ top: 150px;
+ left: -20;
+}
+.welcommessage{
+  position:absolute;
+  top: 70px;
+  left: 50px;
+  p{
+      font-weight: bold;
+      font-size: 1.8rem;
+      margin-top: 5px;
+  }
+}
+::-webkit-scrollbar, *::-webkit-scrollbar {
+  display: none;
+  overflow: hidden;
+}
+
+ion-content {
+  overflow: hidden;
+  --overflow: hidden;
+}
+
+.scroll-content {
+  overflow: hidden;
+}
+
+ion-list {
+  background: transparent;
+  transform: translateY(20vh);
+  ion-item {
+    border: 1px solid var(--ion-color-medium);
+    border-radius: 10px;
+  }
+  ion-row {
+    margin-bottom: 5vh;
+  }
+  ion-button {
+    width: 30vh;
+    margin: auto;
+  }
+  .alignItems {
+    ion-checkbox, ion-note {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    ion-checkbox {
+      margin-right: 3vw;
+      --size: 1.1rem;
+    }
+  }
+  
+}
+.error{
+  font-size: 0.75rem;
+}
+.backButton{
+  position: absolute;
+  top: 190px;
+  left: 15px;
+  font-size: 2rem;
+}

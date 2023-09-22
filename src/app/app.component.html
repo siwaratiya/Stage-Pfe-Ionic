@@ -1,0 +1,63 @@
+<ion-app>
+  <ion-menu  menuId="main-menu" side="start" content-id="main">
+    <ion-header>
+      <ion-toolbar color="home-red">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      
+        <ion-refresher slot="fixed" (ionRefresh)="doSomthing($event)">
+          <ion-refresher-content pullingIcon="arrow-dropdown" refreshingSpinner="circles" refreshingText="Actualiser...">
+          </ion-refresher-content>
+        </ion-refresher>
+      
+      <div class="menu-header-bg"></div>
+      <div class="header-content">
+        <img src="assets/icon/profil.jpg"/>
+        <ion-label *ngIf="client">
+          <h2>{{client.nom}} {{client.prenom}}</h2>
+        </ion-label>
+      </div>
+      <ion-list>
+        <ion-menu-toggle>
+          <ion-item routerLink="/acceuil">
+            <ion-icon name="home" slot="start"></ion-icon>
+            <ion-label>Accueil</ion-label>
+          </ion-item>
+         </ion-menu-toggle>
+      <ion-menu-toggle>
+        <ion-item routerLink="/profil">
+          <ion-icon name="person" slot="start"></ion-icon>
+          <ion-label>Profil</ion-label>
+        </ion-item>
+       </ion-menu-toggle>
+        <ion-menu-toggle>
+        <ion-item routerLink="/service">
+          <ion-icon name="construct" slot="start"></ion-icon>
+          <ion-label>Services</ion-label>
+        </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+        <ion-item routerLink="/listrec">
+          <ion-icon name="notifications-outline" slot="start"></ion-icon>
+          <ion-label>Réclamation</ion-label>
+        </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="/front">
+            <ion-icon name="podium" slot="start"></ion-icon>
+            <ion-label>Statistiques</ion-label>
+          </ion-item>
+          </ion-menu-toggle>
+          <ion-item routerLink="/auth" class="btn" >
+            <ion-icon name="log-out-outline" slot="start"></ion-icon>
+            <ion-label>Déconnexion</ion-label>            
+          </ion-item>
+      </ion-list>
+    </ion-content>
+    <img src="http://www.arabsoft.com.tn/smart/themes/default/assets/img/logo_svg.svg"/>
+  </ion-menu>   
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>
+

@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="home-red">
+    <ion-icon name="arrow-back-outline" class="backButton" routerLink="/service"></ion-icon>
+    <ion-title>
+      Ressources Humaines
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="ion-padding">
+    <ion-refresher slot="fixed" (ionRefresh)="doSomthing($event)">
+      <ion-refresher-content pullingIcon="arrow-dropdown" refreshingSpinner="circles" refreshingText="Actualiser...">
+      </ion-refresher-content>
+    </ion-refresher>
+  </div>
+  <h2>Les Employées De Votre Société</h2>
+  <ion-grid>
+    <ion-row id="grid-heading">
+      <ion-col>
+        Employer
+      </ion-col>
+      <ion-col>
+       conge
+      </ion-col>
+      <ion-col>
+        Salaire
+      </ion-col>
+      <ion-col>
+        date travail
+      </ion-col>
+    </ion-row>
+    <ion-row *ngFor=" let grh of grhs ">
+      <ion-col>
+        {{grh.employer}}
+      </ion-col>
+      <ion-col>
+        {{grh.congee}}
+      </ion-col>
+      <ion-col>
+        {{grh.salaire}}
+      </ion-col>
+      <ion-col>
+        {{grh.date_travail}}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

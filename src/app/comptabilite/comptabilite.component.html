@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="home-red">
+    <ion-icon name="arrow-back-outline" class="backButton" routerLink="/service"></ion-icon>
+    <ion-title>
+     Comptabilité
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="ion-padding">
+    <ion-refresher slot="fixed" (ionRefresh)="doSomthing($event)">
+      <ion-refresher-content pullingIcon="arrow-dropdown" refreshingSpinner="circles" refreshingText="Actualiser...">
+      </ion-refresher-content>
+    </ion-refresher>
+  </div>
+  <h2>Les Employées De Votre Société</h2>
+  <ion-grid>
+    <ion-row id="grid-heading">
+      <ion-col>
+        Factures
+      </ion-col>
+      <ion-col>
+       Etat facture
+      </ion-col>
+      <ion-col>
+        Solde banque
+      </ion-col>
+      <ion-col>
+       Date facture
+      </ion-col>
+    </ion-row>
+    <ion-row *ngFor=" let comptabilite of comptabilites ">
+      <ion-col>
+        {{comptabilite.facture}}
+      </ion-col>
+      <ion-col>
+        {{comptabilite.etat_facture}}
+      </ion-col>
+      <ion-col>
+        {{comptabilite.solde_banque}}
+      </ion-col>
+      <ion-col>
+        {{comptabilite.date_facture}}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+

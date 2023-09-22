@@ -1,0 +1,28 @@
+ion-content {
+  //--ion-background-color:rgb(141, 171, 200);
+  --ion-background-color: linear-gradient(90deg, #97afd6 0%,#f1eae5fa 50%, #e7c482 100% );
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.993) ;
+}
+ion-grid {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 98%;
+  
+    #grid-heading {
+      background-color: rgb(226, 155, 23);
+      border: 1px solid rgb(226, 155, 23);
+    }
+    ion-row {
+      border: 1px solid #6d6b6b;
+    }  
+    ion-row:nth-child(even) {
+      background-color: #6d9fc8;
+     
+    }
+    ion-col {
+      border-right: 1px solid #6d6b6b;
+    }
+  }
+  .backButton{
+    font-size: 1.3rem;
+  }

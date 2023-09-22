@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="home-red">
+    <ion-icon name="arrow-back-outline" class="backButton" routerLink="/service"></ion-icon>
+    <ion-title>
+      Inventaire
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="ion-padding">
+    <ion-refresher slot="fixed" (ionRefresh)="doSomthing($event)">
+      <ion-refresher-content pullingIcon="arrow-dropdown" refreshingSpinner="circles" refreshingText="Actualiser...">
+      </ion-refresher-content>
+    </ion-refresher>
+  </div>
+  <h2>Stock De Votre Société</h2>
+  <ion-grid>
+    <ion-row id="grid-heading">
+      <ion-col>
+        Nom du produit
+      </ion-col>
+      <ion-col>
+        Quantité
+      </ion-col>
+      <ion-col>
+        Arrivage
+      </ion-col>
+      <ion-col>
+        Date d'Arrivage
+      </ion-col>
+    </ion-row>
+    <ion-row *ngFor=" let stock of stocks ">
+      <ion-col>
+        {{stock.nom_produit}}
+      </ion-col>
+      <ion-col>
+        {{stock.qnt_produit}}
+      </ion-col>
+      <ion-col>
+        {{stock.arrivage}}
+      </ion-col>
+      <ion-col>
+        {{stock.date_arrivage}}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+

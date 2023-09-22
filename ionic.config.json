@@ -1,0 +1,7 @@
+{
+  "name": "myexpl",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

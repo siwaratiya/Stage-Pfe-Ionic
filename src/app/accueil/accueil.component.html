@@ -1,0 +1,26 @@
+    <ion-header>
+      <ion-toolbar color="home-red">
+        <ion-title>Bienvenue</ion-title>
+        <ion-button color="white" slot="start">
+        <ion-menu-button menu="main-menu"></ion-menu-button>
+      </ion-button>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <div class="ion-padding">
+        <ion-refresher slot="fixed" (ionRefresh)="doSomthing($event)">
+          <ion-refresher-content pullingIcon="arrow-dropdown" refreshingSpinner="circles" refreshingText="Actualiser...">
+          </ion-refresher-content>
+        </ion-refresher>
+      </div>
+<ion-card style="border-radius: 50px;" class="articles" *ngFor="let actualitee of actualitees ">
+  <div class="left">
+    <img src="https://www.villedefloing.com/wp-content/uploads/2015/05/news2.jpg" alt="">
+  </div>
+<ion-card-content>
+    <p style="color: black;" class="date">{{actualitee.heure | date}}</p>
+    <h5 style="color: black;">{{actualitee.titre}}</h5>
+    <p style="color: black;" class="description">{{actualitee.description}}</p>
+</ion-card-content>
+</ion-card>
+    </ion-content>

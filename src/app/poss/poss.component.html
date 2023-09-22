@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="home-red">
+    <ion-icon name="arrow-back-outline" class="backButton" routerLink="/service"></ion-icon>
+    <ion-title>
+      Poss
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="ion-padding">
+    <ion-refresher slot="fixed" (ionRefresh)="doSomthing($event)">
+      <ion-refresher-content pullingIcon="arrow-dropdown" refreshingSpinner="circles" refreshingText="Actualiser...">
+      </ion-refresher-content>
+    </ion-refresher>
+  </div>
+  <ion-grid>
+    <ion-row id="grid-heading">
+      <ion-col>
+        Nom caissier
+      </ion-col>
+      <ion-col>
+        Recette matin
+      </ion-col>
+      <ion-col>
+        Recette AprésMidi
+      </ion-col>
+      <ion-col>
+        Date caisse
+      </ion-col>
+    </ion-row>
+    <ion-row *ngFor=" let poss of posss ">
+      <ion-col>
+        {{poss.nom_caissier}}
+      </ion-col>
+      <ion-col>
+        {{poss.recette_matin}}
+      </ion-col>
+      <ion-col>
+        {{poss.recette_apres_midi}}
+      </ion-col>
+      <ion-col>
+        {{poss.date_caisse}}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
